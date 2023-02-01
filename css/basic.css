@@ -1,0 +1,1024 @@
+/* ==========  Main Here! =========== */
+
+.main {
+    line-height: 160%;
+    font-size: 1.125rem;
+    margin: 0 auto;
+    padding: 4rem 0 10rem 0;
+    max-width:900px;
+
+    /* border: 1px solid blue; */
+}
+
+
+/* ==========  Basic Here! =========== */
+
+
+
+/* Logo and Navigation */
+
+@media screen and (max-width: 412px) {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        color: #262626;
+        font-size: 1rem;
+
+    /* background-color: rgba(50, 102, 205, 0.179); */
+    }
+
+
+    .top,
+    .sub-menus,
+    .main-content,
+    .footer {
+        margin: 0;
+    }
+
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .innerbox {
+        width: 88%;
+        margin: 0 auto;
+        /* border: 2px solid yellow; */
+        padding: 1rem;
+    }
+
+    .top-container {
+        width: 94%;
+        display: flex;
+        justify-content:space-between;
+        padding: 3rem 0 1.5rem 0;
+        /* border: 1px solid red; */
+
+    }
+
+    .logo {
+        width: 75%;        
+        /* border: 1px solid red; */
+    }
+
+    .logo img{
+        width:100%;
+        min-width: 150px;
+        max-width:250px;
+    }
+
+    /* Mobile menu icon start */
+
+    .mobile{
+        width: 20%;
+        padding-left: 5px;
+        align-self: center;
+        /* border: 1px solid blue; */
+        text-align: end;
+    }
+
+    .icon {        
+        width:100%;
+        max-width: 2rem;
+        cursor: pointer;
+        /* border: 1px solid blue; */
+    }
+
+
+    .nav{
+        position: fixed;
+        visibility: hidden;
+        width: 100vw ;
+        top: 7rem;
+        right: 0;           
+        /* transition: transform 220ms; */
+        /* transform: translateX(0) ;  */
+        text-align: right;
+        background-color: #43B9BB;
+        z-index:2;
+        /* border-radius: .2rem; */
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+    }
+
+    /* #modal{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;   
+    } */
+
+    .show {
+        /* transform: translateX(200%) ; */
+        visibility: visible;
+        
+    }
+    .wiki {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+
+    .nav-menu{
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .wiki-btn {
+        padding: .25rem .7rem;
+        /* border-radius: 0.3rem; */
+        background-color: #554A59;
+        color: #ffffff;
+        text-decoration: none;
+        margin-bottom: 1rem
+
+    }
+
+    .wiki-btn:hover {
+        text-decoration: none;
+        border : 2px solid #554A59;
+        background-color: #43B9BB;
+        color: #554A59;
+        font-weight: bold;
+    }
+
+    .nav-menu a{
+        display: block;
+        text-decoration: none;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        color:#ffffff;
+    }
+
+    .nav-menu a:hover, .nav-menu a:focus{
+        /* text-decoration: 2px solid underline; */
+        /* border-bottom: 2px solid #ffffff; */
+        color:#554A59;
+    }
+
+    #nav-menu-on{
+        color:#554A59;
+        text-decoration: underline;
+    }
+
+    /* Mobile menu icon end */
+
+    /*Submenus stars*/
+
+    .sub-menus {
+        position: sticky;
+        top: 0;
+    }
+
+    .sub-container {
+        background-color: #554A59;
+        padding: .5rem 0;
+        /* border: 2px solid blue; */
+    }
+
+    #sub-menu{
+        color:#ffffff;
+    }
+
+    .pre-arrow::after {
+        position: absolute;
+        left: 7%; 
+        top: 1.7rem; 
+        content: '';
+        width: 1.1rem; /* 사이즈 */
+        height: 1.1rem; /* 사이즈 */
+        border-top: 3px solid #ffffff; /* 선 두께 */
+        border-right: 3px solid #ffffff; /* 선 두께 */
+        transform: rotate(225deg); /* 각도 */
+    }
+    
+    .next-arrow::after {
+        position: absolute;
+        left: 93%; 
+        top: 1.7rem; 
+        content: '';
+        width: 1.1rem; /* 사이즈 */
+        height: 1.1rem; /* 사이즈 */
+        border-top: 3px solid #ffffff; /* 선 두께 */
+        border-right: 3px solid #ffffff; /* 선 두께 */
+        transform: rotate(45deg); /* 각도 */
+    }
+
+    /* Submenus end */
+
+    /* footers*/
+    .footer-container {
+        margin: 0 auto;
+
+    }
+
+    .upper-footer,
+    .lower-footer {
+        color: #ffffff;
+        padding: 1rem 0;
+        /* border: 1px solid red; */
+    }
+
+    .upper-footer {
+        display: none;
+        /* background-color: #43B9BB; */
+    }
+
+    .lower-footer {
+        background-color: #43B9BB;
+    }
+    .footer-innerbox{
+        width: 90%;
+        font-size:0.75rem;
+    }
+    .col + .col{
+        padding-top: .5rem;
+    }    
+    .col a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    
+    .col a:hover{
+        text-decoration: underline;
+    }
+
+    /* footer ends */
+
+    /* top button */
+
+    #top{
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 20px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: #43B9BB; /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 7px; /* Some padding */
+        border-radius: 1px; /* Rounded corners */
+        font-size: 16px; /* Increase font size */
+    }
+
+    
+}
+
+
+@media screen and (min-width: 413px) and (max-width: 780px) {
+
+        *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        color: #262626;
+        font-size: 1rem;
+
+        /* background-color: rgba(50, 102, 205, 0.179); */
+    }
+
+
+    .top,
+    .sub-menus,
+    .main-content,
+    .footer {
+        margin: 0;
+    }
+
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+        
+    .innerbox {
+        width: 85%;
+        margin: 0 auto;
+        /* border: 2px solid yellow; */
+        padding: 1rem;
+    }
+
+    .top-container {
+        width: 90%;
+        display: flex;
+        justify-content:space-between;
+        padding: 3rem 0 1.5rem 0;
+        /* border: 1px solid red; */
+    
+    }
+
+    .logo {
+        width: 75%;        
+        /* border: 1px solid red; */
+    }
+
+    .logo img{
+        width:100%;
+        min-width: 150px;
+        max-width:250px;
+    }
+    
+    /* Mobile menu icon start */
+    .mobile{
+        width: 20%;
+        padding-left: 5px;
+        align-self: center;
+        /* border: 1px solid blue; */
+        text-align: end;
+    }
+
+    .icon{
+        
+        width:100%;
+        max-width: 2rem;
+        cursor: pointer;
+        /* border: 1px solid blue; */
+    }
+    
+
+    .nav{
+        position: fixed;
+        visibility: hidden;
+        top: 7rem;
+        right: 0;    
+        width: 50% ; 
+        /* transition: transform 220ms; */
+        /* transform: translateX(200%) ; */
+        text-align: right;
+        background-color: #43B9BB;
+        z-index:2;
+        /* border-radius: .2rem; */
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        
+        display: flex;
+        flex-direction: column; 
+        font-size: 0.9rem;
+    
+    }
+    
+    /* #modal{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;   
+    } */
+
+    .show {
+        /* transform: translateX(0) ; */
+        visibility: visible;
+    }
+    
+    .wiki {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+
+    .nav-menu{
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .wiki-btn {
+        padding: .25rem .7rem;
+        /* border-radius: 0.3rem; */
+        background-color: #554A59;
+        color: #ffffff;
+        text-decoration: none;
+        margin-bottom: 1rem
+
+    }
+
+    .wiki-btn:hover {
+        text-decoration: none;
+        font-weight: bold;
+        border : 2px solid #554A59;
+        background-color: #43B9BB;
+        color: #554A59;
+    }
+
+    .nav-menu a{
+        display: block;
+        text-decoration: none;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        color:#ffffff;
+    }
+
+    .nav-menu a:hover{
+        /* text-decoration: 2px solid underline; */
+        /* border-bottom: 2px solid #ffffff; */
+        color:#554A59;   
+        /* font-weight: bold;      */
+    }
+
+    #nav-menu-on{
+        color:#554A59;
+        text-decoration: underline;
+    }
+
+    /* Mobile menu icon end */
+
+    /*Submenus stars*/
+
+    .sub-menus {
+        position: sticky;
+        top: 0;
+    }
+
+    .sub-container {
+        background-color: #554A59;
+        padding: .5rem 0;
+        /* border: 2px solid blue; */
+    }
+
+    #sub-menu{
+        color:#ffffff;
+    }
+
+    .pre-arrow::after {
+        position: absolute;
+        left: 7%; 
+        top: 1.7rem; 
+        content: '';
+        width: 1.1rem; /* 사이즈 */
+        height: 1.1rem; /* 사이즈 */
+        border-top: 3px solid #ffffff; /* 선 두께 */
+        border-right: 3px solid #ffffff; /* 선 두께 */
+        transform: rotate(225deg); /* 각도 */
+    }
+    
+    .next-arrow::after {
+        position: absolute;
+        left: 93%; 
+        top: 1.7rem; 
+        content: '';
+        width: 1.1rem; /* 사이즈 */
+        height: 1.1rem; /* 사이즈 */
+        border-top: 3px solid #ffffff; /* 선 두께 */
+        border-right: 3px solid #ffffff; /* 선 두께 */
+        transform: rotate(45deg); /* 각도 */
+    }
+
+    /* Submenus end */
+    
+
+    .upper-footer,
+    .lower-footer {
+        color: #ffffff;
+        padding: 1rem 0;
+        /* border: 1px solid red; */
+    }
+    
+    .upper-footer {
+        background-color: #43B9BB;
+    }
+    
+    .lower-footer {
+        background-color: #554A59;
+    }
+    .footer-innerbox{
+        width: 90%;
+        font-size:0.75rem;
+    }
+    
+    .row{
+        display: grid;    
+        grid-template-columns: repeat(2, 50%);
+        gap: 1%;
+    }
+
+    
+    .upper-row .col img{
+        width: 50px;
+        margin-right: .5rem;
+    }
+    
+    #links{
+        text-align: start;
+        grid-column: 1 / 3;
+        grid-row: 1;
+        padding-bottom: 0.5rem;        
+    }
+
+    .col a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    
+    .col a:hover{
+        text-decoration: underline;
+    }
+    /* footer ends */
+
+    /* top button */
+
+    #top{
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 20px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: #43B9BB; /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 7px; /* Some padding */
+        border-radius: 1px; /* Rounded corners */
+        font-size: 16px; /* Increase font size */
+    }
+
+    
+}
+
+@media screen and (min-width:781px) and (max-width: 1114px) {
+
+    .mobile{
+        display:none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        color: #262626;
+        font-size: 1rem;
+
+        /* background-color: rgba(50, 102, 205, 0.179); */
+    }
+
+
+    .top,
+    .sub-menus,
+    .main-content,
+    .footer {
+        margin: 0;
+    }
+
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
+    .innerbox {
+        width: 70%;
+        margin: 0 auto;
+        /* border: 2px solid yellow; */
+        padding: 1rem;
+    }
+
+    .top-container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 0 2rem 0 ;
+        /* border: 1px solid red; */
+    
+    }
+    
+    .logo {
+        width: 100%;
+        /* border: 1px solid red; */
+        padding-bottom: 1rem;
+    }
+    
+    .logo img {
+        width:100%;
+        min-width: 250px;
+        max-width: 330px;
+        padding-bottom: 1rem;
+    }
+    
+    .nav, #modal{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        font-size: 0.9rem;
+    
+        /* border: 1px solid red; */
+    
+    }
+    
+    .wiki {
+        margin-left: 1rem;
+    }
+    
+    .wiki-btn {
+        padding: .25rem .7rem;
+        /* border-radius: 0.3rem; */
+        background-color: #43B9BB;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .wiki-btn:hover {
+        background-color: #554A59;
+    }
+    
+    .nav-menu a {
+        text-transform: uppercase;
+        margin-right: 2.3rem;
+        text-decoration: none;
+        color: #262626;
+    }
+    
+    .nav-menu a:hover {
+        color: #D92332;
+        padding-bottom: .3rem;
+        border-bottom: 4px solid #D92332;
+    }
+    #nav-menu-on{
+        color: #D92332;
+        padding-bottom: .3rem;
+        border-bottom: 4px solid #D92332;
+    }
+  
+    /*Submenus stars*/
+
+    .sub-menus {
+        position: sticky;
+        top: 0;
+    }
+
+    .sub-container {
+        background-color: #554A59;
+        padding: 1.5rem 0;
+        /* border: 2px solid blue; */
+    }
+
+    #sub-menu{
+        color:#ffffff;
+    }
+
+    .pre-arrow::after {
+        position: absolute;
+        left: 15%; 
+        top: 2.5rem; 
+        content: '';
+        width: 1.1rem; /* 사이즈 */
+        height: 1.1rem; /* 사이즈 */
+        border-top: 3px solid #ffffff; /* 선 두께 */
+        border-right: 3px solid #ffffff; /* 선 두께 */
+        transform: rotate(225deg); /* 각도 */
+    }
+    
+    .next-arrow::after {
+        position: absolute;
+        left: 83.5%; 
+        top: 2.5rem; 
+        content: '';
+        width: 1.1rem; /* 사이즈 */
+        height: 1.1rem; /* 사이즈 */
+        border-top: 3px solid #ffffff; /* 선 두께 */
+        border-right: 3px solid #ffffff; /* 선 두께 */
+        transform: rotate(45deg); /* 각도 */
+    }
+
+    /* Submenus end */
+    
+     /* Footers */
+    
+    /* .footer-container {
+        margin: 0 auto;
+    
+    } */
+    
+    .upper-footer,
+    .lower-footer {
+        color: #ffffff;
+        padding: 1rem 0;
+        /* border: 1px solid red; */
+    }
+    
+    .upper-footer {
+        background-color: #43B9BB;
+    }
+    
+    .lower-footer {
+        background-color: #554A59;
+    }
+    .footer-innerbox{
+        width: 90%;
+        font-size:0.8rem;
+    }
+    
+    .upper-row{
+        /* display: grid;    
+        grid-template-columns: repeat(5, 20%);
+        gap: 1%;
+        justify-items: center; */
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    
+    .upper-row .col img{
+        width: 50px;
+        margin-right: .5rem;
+    }
+    
+    .lower-row{
+        display: grid;    
+        grid-template-columns: repeat(4, 25%);
+        gap: 1%;
+        justify-items: center;
+    }
+    
+    #links{
+        grid-column: 1 ;
+        grid-row: 1 / 3;
+        padding-bottom: 0.5rem;     
+    }
+
+    .col a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    
+    .col a:hover{
+        text-decoration: underline;
+    }
+    /* footer ends */
+    /* top button */
+
+    #top{
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: #43B9BB; /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 10px; /* Some padding */
+        border-radius: 1px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+    }
+
+}
+
+@media screen and (min-width:1115px) {
+    
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #262626;
+    font-size: 1rem;
+
+    /* background-color: rgba(50, 102, 205, 0.179); */
+}
+
+.mobile {
+    display: none;
+}
+
+.top,
+.sub-menus,
+.main-content,
+.footer {
+    margin: 0;
+}
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.innerbox {
+    width: 70%;
+    margin: 0 auto;
+    /* border: 2px solid yellow; */
+    padding: 1rem;
+}
+
+.top-container {
+    width: 90%;
+    display: flex;
+    padding: 5rem 0 3rem 0;
+    /* border: 1px solid red; */
+
+}
+
+.logo {
+    width: 30%;
+    /* border: 1px solid red     */
+}
+
+.logo img {
+    width:100%;
+    min-width: 280px;
+    max-width: 350px;
+    /* padding-top: 2%; */
+}
+
+.nav {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 0.9rem;
+
+    /* border: 1px solid red; */
+
+}
+
+.wiki {
+    margin-bottom: 1rem;
+}
+
+.wiki-btn {
+    padding: .25rem .7rem;
+    /* border-radius: 0.3rem; */
+    background-color: #43B9BB;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.wiki-btn:hover {
+    background-color: #554A59;
+}
+
+.nav-menu a {
+    text-transform: uppercase;
+    margin-left: 3rem;
+    text-decoration: none;
+    color: #262626;
+}
+
+.nav-menu a:hover {
+    color: #D92332;
+    padding-bottom: .3rem;
+    border-bottom: 4px solid #D92332;
+}
+#nav-menu-on{
+    color: #D92332;
+    padding-bottom: .3rem;
+    border-bottom: 4px solid #D92332;
+}
+
+/*Submenus stars*/
+
+.sub-menus {
+    position: sticky;
+    top: 0;
+}
+
+.sub-container {
+    background-color: #554A59;
+    padding: 1.5rem 0;
+    
+    /* border: 2px solid blue;     */
+}
+
+#sub-menu{
+    color:#ffffff;
+}
+.pre-arrow::after {
+    position: absolute;
+    left: 15%; 
+    top: 2.5rem; 
+    content: '';
+    width: 1.1rem; /* 사이즈 */
+    height: 1.1rem; /* 사이즈 */
+    border-top: 3px solid #ffffff; /* 선 두께 */
+    border-right: 3px solid #ffffff; /* 선 두께 */
+    transform: rotate(225deg); /* 각도 */
+    
+}
+
+.next-arrow::after {
+    position: absolute;
+    left: 83.5%; 
+    top: 2.5rem; 
+    content: '';
+    width: 1.1rem; /* 사이즈 */
+    height: 1.1rem; /* 사이즈 */
+    border-top: 3px solid #ffffff; /* 선 두께 */
+    border-right: 3px solid #ffffff; /* 선 두께 */
+    transform: rotate(45deg); /* 각도 */
+    
+}
+
+
+
+/* Submenus end */
+
+
+/* Footer start */
+
+/* .footer-container {
+    margin: 0 auto;
+} */
+
+.upper-footer,
+.lower-footer {
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+.upper-footer {
+    background-color: #43B9BB;
+}
+
+.lower-footer {
+    background-color: #554A59;
+}
+
+.footer-innerbox{
+    width: 90%;
+    font-size:0.8rem;
+}
+.upper-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+    align-items:flex-end;
+    /* font-size:0.9rem; */
+}
+
+
+.upper-row .col img{
+    width: 3.5rem;
+    margin-right: .5rem;
+    align-self: flex-start;
+    /* border: 1px solid yellow; */
+}
+
+.lower-row{
+    display: flex;  
+    justify-content: space-between;  
+    /* grid-template-columns: repeat(4, 25%);
+    gap: 1%;
+    justify-items: center; */
+}
+
+/* #links{
+    grid-column: 1 ;
+    grid-row: 1 / 3;
+    padding-bottom: 0.5rem;     
+} */
+
+.col a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.col a:hover{
+    text-decoration: underline;
+}
+
+/* Footer ends*/ 
+
+/* top button */
+
+#top{
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #43B9BB; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 1px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+}

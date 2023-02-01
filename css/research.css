@@ -1,0 +1,122 @@
+.focus-wrap{
+    margin-bottom: 3rem;
+    display:flex;  
+    flex-wrap: nowrap; 
+}
+
+.focus-label{
+    width: 6rem;
+    padding: .5rem 0;
+    background-color:#554A59 ;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #554A59;
+}
+
+.focus-title{
+    width: 40rem;
+    padding: .5rem 0 .5rem 1rem;
+    border-bottom: 1px solid #554A59;
+    
+}
+
+.focus-btn{
+    width: 10rem;
+    padding: .5rem 0;
+    background-color: #43B9BB;
+    color: #fff;
+    border-bottom: 1px solid #43B9BB;
+    text-align: center;
+    cursor: pointer;
+    /* font-size: 1rem; */
+}
+
+.focus-text{   
+    display: none;
+    height:0; 
+    
+    /* position: absolute; */
+}
+
+.text-show{
+    display: block;
+    height: auto;
+    /* position: static; */
+    font-size:0.9rem;
+     /* line-height: 130%; */
+    margin-bottom: 2rem;
+    background-color: #fff;
+}
+
+.list-sq{
+    background-color: #43B9BB;
+    width:1.5rem;
+    padding: 0 .5rem;
+    margin-right: .9rem;
+}
+
+.papers{
+    list-style-type: square ;
+}
+
+li a, .topic{
+    text-decoration: none;
+    color:#D92332;
+    font-weight: 500;
+}
+
+li a:hover{
+    text-decoration: underline;
+}
+
+.sub-title{   
+    font-weight:700;
+}
+
+.gather-imgs{
+    display:flex;
+    justify-content: space-between;    
+    
+}
+.gather-img{
+    width: 45%;
+}
+
+.gather-img p{
+    padding-left: 6%;
+}
+
+.figure{
+    color:#5F5264;
+    font-family: 'Cambria', Georgia, Times, 'Times New Roman', serif;
+}
+
+ .indent{
+    margin-left: 2rem;
+}
+
+.outdent{
+    text-indent: -3rem;
+    margin-left: 2rem;
+}
+
+.author{
+    font-family: 'Cambria', Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+@media screen and (max-width: 780px) {
+
+    .focus-label, .focus-title, .focus-btn{
+        font-size: .8em;
+    }
+
+    .gather-imgs{
+        display:block;
+    }   
+    .gather-img{
+        width: 90%;
+    }
+}
+

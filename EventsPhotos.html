@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSC|Goddard Group</title>
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/member.css">    
+    <link rel="stylesheet" href="css/research.css">
+    <link rel="stylesheet" href="css/publication.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/photo.css">
+    <link rel="stylesheet" href="css/contact.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script>
+    <load target="assets/js/sly.min.js" type="header" />
+    <load target="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js" />
+    <load target="//cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js" />
+</head>
+
+<body>
+
+<!-- Logo& Navigation -->
+<header class="top">
+    <div class="top-container container">
+        <div class="logo">
+            <a href="Home.html">
+            <img 
+                alt="MSC Materials and Process Simulation Center and Goddard Group of Caltech" 
+                src="img/logo-03.svg"></a>            
+        </div>
+        
+        <!-- Menu Icon for Mobile -->
+        <div class="mobile">
+            <img class="icon" src="img/menu-open.svg" >
+               
+        </div>
+
+
+        <!-- Navigation menu -->
+        
+        <div class="nav" id="nav">
+        <!-- <div id="modal"> -->
+            <div class="wiki">
+                <a class="wiki-btn" href="https://wiki.wag.caltech.edu/twiki/bin/view" target="_blank">WIKI</a>
+            </div>
+            <div class="nav-menu">
+                <a href="AboutWAG.html">About</a>
+                <a href="MembersCurrent.html">Members</a>
+                <a href="ResearchOverview.html">Research</a>
+                <a href="Publications.html">Publications</a>
+                <a id="nav-menu-on" href="EventsPhotos.html">Events</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+        <!-- </div> -->
+        </div>
+        
+    </div>
+</header>
+
+<!-- Sub menues -->
+
+<div class="sub-menus">
+    <div class="sub-container container" >
+        <div class="sub-innerbox innerbox" id="wrapper">
+            <div class="slide-frame">
+                <ul class="slidee">
+                    <li><a id="sub-menu" href="EventsPhotos.html">Group Photos</a></li>
+                    <li><a href="EventsCalendar.html">Calendar</a></li>
+                </ul>             
+           
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Contents -->
+<main class="main-content">
+    <div class="main-container container">
+        <div class="main-innerbox innerbox">
+
+
+            <!-- From Here -->
+
+        <!-- <div class="main"> -->
+            <div id="gallery"></div>
+            <script>
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "/img/group-photo", true);
+                xhr.responseType = 'document';
+                xhr.onload = () => {
+                if (xhr.status === 200) {
+                    var elements = xhr.response.getElementsByTagName("a");
+                    for (x of elements) {
+                    if ( x.href.match(/\.(jpe?g|JPE?G|png|gif)$/) ) { 
+                        let img = document.createElement("img");
+                        img.src = x.href;
+                        img.className = "group-pic";
+                        document.querySelector('#gallery').appendChild(img);
+                    } 
+                    };
+                } 
+                else {
+                    alert('Request failed. Returned status of ' + xhr.status);
+                }
+                }
+                xhr.send()
+
+                let darkBoxVisible = false;
+
+                window.addEventListener('load', (event) => {
+                    let images = document.querySelectorAll(".group-pic");
+                    if(images !== null && images !== undefined && images.length > 0) {
+                        images.forEach(function(img) {
+                            img.addEventListener('click', (evt) => {
+                                showDarkbox(img.src);
+                            });
+                        });
+                    }
+                });
+
+                function showDarkbox(url) {
+                if(!darkBoxVisible) {
+                    let x = (window.innerWidth * 0.2) / 2;
+                    let y = window.scrollY + 50;
+                    let imgName = url.split('/');
+                    let imgTitle = imgName[imgName.length-1].split('.');
+                    // Create the darkBox
+                    var div = document.createElement("div");
+                    div.id = "darkbox";
+                    div.innerHTML = `<img class="darkboximg" src="${url}" width="95%" /><p style="color:#ffffff;">${imgTitle[0]}</p>`;
+                    document.body.appendChild(div);
+                    let box = document.getElementById("darkbox");
+                    box.style.left = x.toString()+"px";
+                    box.style.top = y.toString()+"px";
+                    box.style.height = 'auto';
+                    box.addEventListener('click', (event) => {
+                        // Remove it
+                        let element = document.getElementById("darkbox");
+                        element.parentNode.removeChild(element);
+
+                        darkBoxVisible = false;
+                    })
+
+                    darkBoxVisible = true;
+
+                } else {
+                    // Remove it
+                    let element = document.getElementById("darkbox");
+                    element.parentNode.removeChild(element);
+
+                    darkBoxVisible = false;
+                }
+            }
+            </script>
+            
+            
+        <!-- </div>    -->
+        <!-- End Here -->
+
+
+    </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container container">
+        <div class="upper-footer">
+            <div class="footer-innerbox innerbox">
+                <div class="upper-row row">
+                    <div class="col" id="links"><strong>Related Links</strong></div>
+                    <div class="col" id="link-item"><a href="https://www.caltech.edu/" target="_blank">California Institute of Technology</a> </div>
+                    <div class="col" id="link-item"><a href="https://www.cce.caltech.edu/" target="_blank"> Caltech | Chemistry and Chemical Engineering</a> </div>
+                    <div class="col" id="link-item"><a href="https://www.eas.caltech.edu/" target="_blank"> Caltech | Engineering and Applied Science</a> </div>
+                    <div class="col" id="link-item"><a href="https://www.liquidsunlightalliance.org/" target="_blank">LiSA | Liquid Sunlight Alliance</a> </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="lower-footer">
+            <div class="footer-innerbox innerbox">
+                <div class="lower-row row">      
+                    <div class="col"><a href="Home.html">
+                        <img id="footer-logo"
+                            alt="MSC Materials and Process Simulation Center and Goddard Group of Caltech" 
+                            src="img/logo-04.svg" width="90%"></a> </div>
+                    <div class="col"> <strong>Location</strong><br><a href="https://www.google.com/maps/place/Beckman+Institute/@34.1390373,-118.126649,18z/data=!4m5!3m4!1s0x80c2c35861927a65:0xb6f2e635b54581a!8m2!3d34.1391999!4d-118.1265925" target="_blank">Beckman Institute (BI) <br> 1200 E California Blvd <br>Pasadena CA 91125 | Caltech</a></div>
+                    <div class="col"> <strong>Contact E-mail</strong><br>
+                        <a href="mailto:wagoddard3@gmail.com?">wagoddard3@gmail.com</a> <br> <a href="mailto:wag@caltech.edu?">wag@caltech.edu</a></div>
+                    <div class="col" id="copyright"><strong>Copyright</strong><br>&copy 2023 MSC | Goddard Group <br> Designed & developed by <a href="mailto:dodohjin@gmail.com?">Sujin Kim</a></div>
+                </div>             
+            </div>
+        </div>
+
+        <button id="top" title="Go to top">Top</button>
+        <script>
+            let topBtn = document.querySelector("#top");
+            
+            window.addEventListener('scroll', function() {
+                if(this.scrollY>350) {
+                    topBtn.style.display = "block";
+                } else{
+                    topBtn.style.display = "none";
+                }
+            })
+
+            topBtn.addEventListener("click", function(e) {
+                e.preventDefault();
+                window.scrollTo({ top:0, behavior:'smooth'});
+            })
+        </script>
+    </div>
+</footer>
+
+<script src="js/icon.js"></script>
+<script src="js/slide.js"></script>
+<!-- <script src="js/map.js"></script>
+<script src="js/map_tabs.js"></script>
+<script src="js/pub_fetch.js"></script>
+<script src="js/pub-update2.js"></script>
+<script src="js/research-popup.js"></script>
+<script src="js/members.js"></script> -->
+
+</body>
+</html>

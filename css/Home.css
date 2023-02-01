@@ -1,0 +1,147 @@
+/* Welcome box */
+
+.welcome{
+    background-color: #554A59;
+    margin-bottom: 3rem;
+}
+
+.welcome-text{
+    margin : 0 auto;
+    width: 100%;
+    height: 55%;
+    overflow: hidden;
+}
+
+.welcome-text img{
+    width: 100%;    
+}
+
+.welcome-to{
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Quick Menu */
+
+.quick-menu{
+    color: #ffffff;
+    line-height: 140%;
+}
+
+.one {
+    background-color: #554A59;
+}
+
+.two {
+    background-color: #43b9bb;
+}
+
+.quick-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.btn{
+    width: 8.5rem;
+    text-align: center;
+    padding: 0.5rem ;
+    /* border: 1px solid #ffffff; */
+    
+    margin: 2rem 0 1rem 0;
+}
+
+.quick-btn-1{
+    background-color: #43b9bb;
+}
+.quick-btn-2{
+    background-color: #554A59;
+}
+
+.btn:hover{
+    
+    transform: translateX(0.2rem) translateY(-0.2rem);
+    transition: 0.5s linear ease-in-out ;
+}
+
+.quick-btn-1 a:hover{
+    color: #554A59;
+    
+}
+.quick-btn-2 a:hover{
+    color: #43b9bb;
+}
+
+.btn a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.calender {
+    padding-bottom: 10rem;
+}
+
+@media screen and (min-width: 781px) {
+
+    .welcome-text{
+        margin : 0 auto;
+        width: 100%;
+        height: 63vh;
+        overflow: hidden;
+    }
+    
+    .welcome-text img{
+        width: 100%;    
+    }
+
+    .one, .two{
+        background-color: #ffffff;
+    }
+
+    .one{
+        margin: 1rem 0;
+    }
+        
+    .quick-menu .innerbox{
+        width: 92%;
+        max-width: 1300px ;
+        display: flex;    
+    }
+
+    .quick-title-1, .quick-title-2, .quick-text-1, .quick-text-2{
+        width: 50%;    
+        padding: 2rem 2rem;
+        min-height: 400px;
+    }
+
+    .quick-title-1, .quick-text-2{
+        background-color: #554A59 ;
+    }
+
+    .quick-title-2, .quick-text-1{
+        background-color: #43b9bb ;
+    }
+
+    .quick-title{
+        padding-left: 2rem;
+    }
+
+    .btn{
+        margin-top: 5rem;
+    }
+    .quick-btn-2{
+        background-color: #43b9bb;
+    }
+    .quick-btn-1{
+        background-color: #554A59;
+    }
+
+    .quick-btn-2 a:hover{
+        color: #554A59;
+        
+    }
+    .quick-btn-1 a:hover{
+        color: #43b9bb;
+    }
+}

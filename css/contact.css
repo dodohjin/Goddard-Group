@@ -1,0 +1,94 @@
+.address{
+    background-color: #43B9BB;
+    color: #ffffff;
+    padding: 5rem;
+    line-height: 200%;
+}
+.add-box{
+    width: 60%;
+    /* border: 1px solid red; */
+    text-align: left;
+    margin: 0 auto;
+}
+
+.contact{
+    padding: 5rem;
+    line-height: 200%;
+}
+.contact form{
+    width: 50%;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    text-align: left;
+    margin: 0 auto;
+
+    /* border: 1px solid red; */
+}
+
+.con-box{
+    width: 80%;
+    font-size: 1rem;
+    padding: .5rem .5rem;
+    border: none;
+    border-bottom: 1px solid #7e7d7d;
+    margin-top: .5rem;
+    text-decoration: none;
+    resize: none;
+}
+
+
+.mes{
+    width: 80%;
+    height: 20%;
+    margin-top: 2.5rem;
+}
+.con-btn{
+    width: 30%;
+    padding: 1rem;
+    background-color: #43B9BB;  
+    margin-top: 2rem;
+    color:#ffffff;
+    border:none;
+    text-align: center;
+}
+
+.con-box:focus, .con-box:hover{
+    transform: translateX(0.2rem) translateY(0.2rem);
+    transition: 0.5s linear ease-in-out ;
+    outline: none;
+}
+
+.con-btn:hover{
+    transform: translateX(0.2rem) translateY(0.2rem);
+    transition: 0.5s linear ease-in-out ;
+    background-color: #554A59;
+    outline: none;
+}
+
+@media screen and (max-width: 780px) {
+
+    .address, .contact{
+        padding: 5rem 1rem;
+    }
+    .add-box{
+        width: 80%;
+    }
+
+    .contact form{
+        width: 85%;
+        display: block;
+    }
+
+    .con-box{
+        width:80%;
+    }
+    .con-btn{
+        width: 70%;
+        padding: 1rem;
+    }
+    .con-box + .con-box{
+        margin-left: 0;
+    }
+    
+}

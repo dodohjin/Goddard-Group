@@ -1,0 +1,101 @@
+.wag, .book{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wag-pic {
+    width: 30%;
+}
+.book-pic {
+    width: 20%;
+    text-align: center;
+}
+
+.wag-pic img, .book-pic img{
+    object-fit: contain;
+}
+
+.wag-intro, .book-intro{
+    width:50%;
+}
+.book-intro{
+    vertical-align:top;
+    
+}
+
+.wag-intro, .book-intro, .book-pic, .book-content{
+    margin-left: 3.5rem;
+}
+
+.cv-btn, .book-btn{
+    font-size: 1rem;
+    border: none;
+    padding: .3rem 2.5rem;
+    background-color: #43B9BB;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.cv-btn:hover, .book-btn:hover{
+    background-color: #554A59;
+}
+
+.wag-text{
+    font-size: 1.05rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5rem;
+}
+
+.book{
+    margin-bottom: 2rem;
+}
+
+.book{
+    justify-content: space-between;
+    font-size: 0.95rem;
+    /* border: 1px solid black; */
+    color: #554A59;
+}
+
+.book-content{
+    font-size: 0.95rem;
+    color: #554A59;
+}
+.book-con-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 0.5rem 0 1rem;
+}
+
+.btn-wrap{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.go-btn{
+    padding: 0.2rem 0.5rem;
+    background-color: #554A59;
+    margin-left: 1rem;
+    color:#ffffff;
+    cursor: pointer;
+}
+.go-btn a{
+    color:#ffffff;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 412px) {
+
+    .wag-pic, .book-pic, .wag-intro, .book-intro, .book-content{
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+}
+
+@media screen and (min-width: 413px) and (max-width: 1114px) {
+    .book-btn{
+        padding: .3rem 0.5rem;
+    }
+}

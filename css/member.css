@@ -1,0 +1,163 @@
+/* Current members */
+.mem-box{
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* border: 1px solid red; */
+}
+
+.mem-int{
+    width:40%;
+    padding: 5%;
+    margin: 0 auto; 
+    
+    font-size: 0.9rem;
+    line-height: 110%;
+
+    /* border: 1px solid black; */
+}
+.mem-img{
+    width:100%;
+    aspect-ratio: 5/6;
+    overflow: hidden;
+    background-color: #ffffff;
+    /* border: 1px solid orangered; */
+}
+
+.mem-img img{
+    width: 100%;
+    height: auto;
+}
+
+.mem-name{
+    font-size: 1.05rem;
+}
+
+.mem-email a, .mem-name a, .mem-area a{
+    text-decoration: none;
+    color: black;
+}
+
+.mem-area{
+    font-family: 'Cambria', Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.link-btn{
+    font-size: 0.5rem;
+    background-color: #43B9BB;
+    padding: 0 .3rem;
+}
+
+.link-btn{
+    margin-left: .5rem;
+}
+
+.link-btn a{
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.link-btn:hover{
+    background-color: #5F5264;
+}
+
+/* Current members */
+
+/* Collaborators */
+
+.map-box{
+    width: 95%;
+}
+
+.tab-box{
+   display:none;
+   margin-bottom: 0.6rem;
+}
+
+.tab-box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+}
+
+.tab-box ul li{
+    display: inline-block;
+    color: #2d2d2d;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.tab-box ul li:hover{
+    border-bottom: 4px solid #43B9BB;
+}
+
+.tab-box ul .active{
+    border-bottom: 4px solid #43B9BB;
+}
+
+.coll-box{
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    line-height: 125%;
+}
+
+.coll-info {
+    
+    display: none;
+}
+
+.active{
+    display: block;
+    height: auto;
+}
+
+.coll-name{
+    font-weight:700;
+}
+
+.coll-ot a{
+    text-decoration: none;
+    color:#2d2d2d;
+}
+
+.res{
+    color:#5F5264;
+    font-family: 'Cambria', Georgia, Times, 'Times New Roman', serif;
+}
+
+circle:hover{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 780px){
+    .mem-int{
+        width:60%;
+        padding: 5%;
+        margin: 0 auto; 
+    
+        /* border: 1px solid black; */
+    }
+
+    .map-box {
+        display: none;
+    }
+
+    .tab-box{
+        display:block !important;
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 412px){
+    .mem-int{
+        width:90%;
+        padding: 5%;
+        margin: 0 auto; 
+    
+        /* border: 1px solid black; */
+    }
+}
