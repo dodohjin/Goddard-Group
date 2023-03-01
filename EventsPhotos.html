@@ -101,6 +101,7 @@
                         let img = document.createElement("img");
                         img.src = x.href;
                         img.className = "group-pic";
+                        img.loading = "lazy";
                         document.querySelector('#gallery').appendChild(img);
                     } 
                     };

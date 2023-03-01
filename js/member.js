@@ -4,7 +4,7 @@ const fs = require('fs');
 // member //
 
 
-    const workbook = xlsx.readFile(__dirname + '/../member.xlsx');
+    const workbook = xlsx.readFile(__dirname + '/../member2.xlsx');
 
     const json = {};
     let i= workbook.SheetNames.length;

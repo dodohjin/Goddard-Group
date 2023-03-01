@@ -7,6 +7,7 @@
     background-color:#2d2d2d; 
     overflow: hidden; 
     text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .darkboximg { 
@@ -15,6 +16,9 @@
     max-height: 684px; 
 }
 
+#darkbox p{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 #gallery {
     line-height:0;

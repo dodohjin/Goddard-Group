@@ -89,15 +89,9 @@
 
             <div class="main">
                 <div class="mem-box">
-                    <div class="mem-int">
-                        <div class="mem-img">
-                            <img alt="Margarita Davis" src="img/member/Margarita Davis.jpg">
-                        </div>
-                        <p class="mem-name"><b>Margarita Davis</b></p>
-                        <p class="mem-position">Administrative Assistant</p>
-                        <p class="mem-email">davism@caltech.edu</p>
-                    </div>
+                    
                 </div>
+                
 
                     <script src="member.json" type="text/javascript"></script>
                     <script>
@@ -118,8 +112,7 @@
                                     <div class="mem-img">
                                         <img alt="${data[i].Name}" src="img/member/${data[i].Name}.jpg">
                                     </div>
-                                    <p class="mem-name"><b><a href="http://${data[i].Personal}" target="_blank">${data[i].Name}</b><span class="link-btn"></span></a></p>
-                                    <p class="mem-position">${data[i].Position}</p>
+                                    <p class="mem-name"><b><a href="${data[i].Personal}" target="_blank">${data[i].Name}</b><span class="link-btn"></span></a></p>
                                     `
                                     memberBox.append(memberRow);
                                     
@@ -130,10 +123,15 @@
                                         <img alt="${data[i].Name}" src="img/member/${data[i].Name}.jpg">
                                     </div>
                                     <p class="mem-name"><b>${data[i].Name}</b></p>
-                                    <p class="mem-position">${data[i].Position}</p>
                                     `
                                     memberBox.append(memberRow);
 
+                                }
+
+                                if(data[i].Position2){
+                                    memberRow.insertAdjacentHTML('beforeend', `<p class="mem-position">${data[i].Position1} | ${data[i].Position2}</p>`);
+                                } else{
+                                    memberRow.insertAdjacentHTML('beforeend', `<p class="mem-position">${data[i].Position1}</p>`);
                                 }
 
                                 if(data[i].Caltech){
@@ -147,7 +145,7 @@
                                                  
                                 if(data[i].Org){
                                     memberRow.insertAdjacentHTML('beforeend',
-                                 `<p class="mem-area"><a href="http://${data[i].Org}" target="_blank">${data[i].Area}<span class="link-btn"></span></a></p>`);
+                                 `<p class="mem-area"><a href="${data[i].Org}" target="_blank">${data[i].Area}<span class="link-btn"></span></a></p>`);
                                 
                                 } else {
 

@@ -1,7 +1,7 @@
 /* Welcome box */
 
 .welcome{
-    background-color: #554A59;
+    
     margin-bottom: 3rem;
 }
 
@@ -84,17 +84,7 @@
 
 @media screen and (min-width: 781px) {
 
-    .welcome-text{
-        margin : 0 auto;
-        width: 100%;
-        height: 63vh;
-        overflow: hidden;
-    }
-    
-    .welcome-text img{
-        width: 100%;    
-    }
-
+  
     .one, .two{
         background-color: #ffffff;
     }

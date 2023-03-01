@@ -1,6 +1,6 @@
 import { get } from 'axios';
-let cheerio = require('cheerio');
-const update = document.querySelector('.update')
+import { load } from 'cheerio';
+
 
 async function getHTML() {
     try{
@@ -12,8 +12,10 @@ async function getHTML() {
 
 getHTML()
 .then(html =>{
+    let update = document.getElementById('update');
+
     let dataOfUpdate="";
-    const $ = cheerio.load(html.data);
+    const $ = load(html.data);
 
     $('body').each(function(elem){
 
@@ -28,6 +30,7 @@ getHTML()
     return update.textContent = `(${lastUpdate[1]})`;
 });
 
+getHTML();
 
 
 // axios.get('https://caltech-msc.github.io/publications/pubs-current.html')

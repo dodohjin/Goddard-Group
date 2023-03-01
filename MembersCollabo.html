@@ -88,9 +88,14 @@
             <!-- From Here!! -->
 
             <div class="main">
+                <div class="map-text">
+                    <p>Goddard and the members of the MSC collaborates with experimental
+                        groups around the world in all of these areas of materials, catalysis, and
+                        pharma, where the MSC develops and applies whatever computational tools
+                        are needed to predict, understand, and explain the experimental results.</p>
+                    <p id="hover" style="font-size:.9rem;">(Hover the map and click to see the collaborators!)</p>
+                </div>
                 <div class="map-box">
-                    <p>He has collaborated with experimental groups around the world in all of these areas, where he develops and applies whatever computational tools are needed to explain and understand the experimental results.</p>
-                    <p style="font-size:.9rem;">(Hover the map and click to see the collaborators!)</p>
                     <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 842.31 506.68">
                         <defs>
@@ -688,7 +693,7 @@
                                 collRow.className = 'coll-info asia' ;
 
                                 collRow.innerHTML = `
-                                <span class="coll-name">${asia[i].PI}</span><span class="coll-ot"> &nbsp;|&nbsp; <a href="${asia[i].webpage}" target="_blank">${asia[i].Organization}</a> &nbsp;|&nbsp; ${asia[i].Email}</span>
+                                <span class="coll-name"><a href="${asia[i].webpage}" target="_blank">${asia[i].PI}</a></span><span class="coll-ot"> &nbsp;|&nbsp; ${asia[i].Organization} &nbsp;|&nbsp; ${asia[i].Email}</span>
                                 <br><span class="coll-ot res">${asia[i].Area}</span><br><br>
                                 `
                                 collBox.append(collRow); 
@@ -706,7 +711,7 @@
                                 collRow.className = 'coll-info europe' ;
 
                                 collRow.innerHTML = `
-                                <span class="coll-name">${europe[i].PI}</span><span class="coll-ot"> &nbsp;|&nbsp;  <a href="${europe[i].webpage}" target="_blank">${europe[i].Organization}</a>  &nbsp;|&nbsp;  ${europe[i].Email}</span>
+                                <span class="coll-name"><a href="${europe[i].webpage}" target="_blank">${europe[i].PI}</a></span><span class="coll-ot"> &nbsp;|&nbsp;  ${europe[i].Organization}  &nbsp;|&nbsp;  ${europe[i].Email}</span>
                                 <br><span class="coll-ot res">${europe[i].Area}</span><br><br>
                                 `
                                 collBox.append(collRow); 
@@ -724,7 +729,7 @@
                                 collRow.className = 'coll-info mideast' ;
 
                                 collRow.innerHTML = `
-                                <span class="coll-name">${mideast[i].PI}</span><span class="coll-ot"> &nbsp;|&nbsp;  <a href="${mideast[i].webpage}" target="_blank">${mideast[i].Organization}</a>  &nbsp;|&nbsp;  ${mideast[i].Email}</span>
+                                <span class="coll-name"><a href="${mideast[i].webpage}" target="_blank">${mideast[i].PI}</a></span><span class="coll-ot"> &nbsp;|&nbsp;  ${mideast[i].Organization}  &nbsp;|&nbsp;  ${mideast[i].Email}</span>
                                 <br><span class="coll-ot res">${mideast[i].Area}</span><br><br>
                                 `
                                 collBox.append(collRow); 
@@ -742,7 +747,7 @@
                                     collRow.className = 'coll-info northamerica' ;
 
                                     collRow.innerHTML = `
-                                    <span class="coll-name">${norame[i].PI}</span><span class="coll-ot"> &nbsp;|&nbsp; <a href="${norame[i].webpage}" target="_blank">${norame[i].Organization}</a> &nbsp;|&nbsp; ${norame[i].Email}</span>
+                                    <span class="coll-name"><a href="${norame[i].webpage}" target="_blank">${norame[i].PI}</a></span><span class="coll-ot"> &nbsp;|&nbsp; ${norame[i].Organization} &nbsp;|&nbsp; ${norame[i].Email}</span>
                                     <br><span class="coll-ot res">${norame[i].Area}</span><br><br>
                                     `
                                     collBox.append(collRow); 

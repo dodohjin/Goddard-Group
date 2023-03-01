@@ -7,18 +7,21 @@
     width: 30%;
 }
 .book-pic {
-    width: 20%;
+    width: 23.8%;
     text-align: center;
+    align-self: center;
 }
 
 .wag-pic img, .book-pic img{
     object-fit: contain;
 }
 
-.wag-intro, .book-intro{
+.wag-intro{
     width:50%;
 }
+
 .book-intro{
+    width: 58%;
     vertical-align:top;
     
 }
