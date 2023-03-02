@@ -14,7 +14,7 @@
  
  (It causes me to think that I have to learn ReactJS so badly.)
  
- I've practiced so much how to deal with different data type such as array & object by using huge json database related to his over 1500 papers. 
+ I've practiced so much how to deal with different data type such as array & object by using huge json database with his over 1500 papers. 
  
  I've also practiced how to make from excel to json, and web scraping. 
  
